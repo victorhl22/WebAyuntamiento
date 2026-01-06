@@ -19,8 +19,8 @@ header {
 }
 
 .logo {
-    height: 60px;
-    display: block;
+    height: 80px;
+    width: auto;
 }
 
 header h1 {
@@ -229,3 +229,4 @@ footer {
         height: 300px;
     }
 }
+
