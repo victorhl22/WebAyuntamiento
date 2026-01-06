@@ -7,6 +7,7 @@ body {
 header {
     background-color: #17af7c;
     padding: 10px;
+    text-align: center;
 }
 
 .logo {
@@ -152,3 +153,4 @@ footer {
     padding: 10px;
 
 }
+
