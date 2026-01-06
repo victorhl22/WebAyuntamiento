@@ -10,6 +10,12 @@ header {
     text-align: center;
 }
 
+maincontacto {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
 .logo {
     height: 60px;
     display: block;
@@ -153,4 +159,5 @@ footer {
     padding: 10px;
 
 }
+
 
