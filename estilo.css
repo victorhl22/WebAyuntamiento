@@ -10,7 +10,8 @@ header {
     text-align: center;
 }
 
-maincontacto {
+/* Corrige este selector - está mal escrito */
+main {
     max-width: 1100px;
     margin: auto;
     padding: 20px;
@@ -19,7 +20,7 @@ maincontacto {
 .logo {
     height: 60px;
     display: block;
-    margin-bottom: 10px;
+    margin: 0 auto 10px auto; /* Centrado */
 }
 
 /* MENÚ */
@@ -35,36 +36,43 @@ maincontacto {
 }
 
 .menu li {
-    margin-right: 20px;
+    flex: 1; /* Añade esto para distribución equitativa */
+    text-align: center;
+    margin-right: 0; /* Elimina o reduce este margen */
 }
 
 .menu a {
     color: rgb(247, 248, 248);
     text-decoration: none;
     font-weight: bold;
+    display: block;
+    padding: 15px 10px; /* Añade padding para mejor clic */
+    transition: background-color 0.3s;
 }
 
 .menu a:hover {
     text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.1); /* Efecto hover */
 }
 
 /* CONTENIDO */
 main {
     padding: 20px;
-     margin: auto;
-    padding: 20px;
+    margin: auto;
+    max-width: 1100px; /* Añade max-width para consistencia */
 }
 
 /* IMAGEN CON HOVER */
 .imagen-hover {
     position: relative;
-    width: 300px;
+    width: 100%; /* Cambia de 300px a 100% */
     max-width: 900px;
+    margin: 0 auto; /* Centra la imagen */
 }
 
 .imagen-hover img {
     width: 100%;
-    height: 100%;
+    height: auto; /* Cambia para mantener proporción */
     aspect-ratio: 16 / 9;
     object-fit: cover;
 }
@@ -83,6 +91,8 @@ main {
     opacity: 0;
     transition: opacity 0.3s;
     text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .imagen-hover:hover .texto-hover {
@@ -130,6 +140,7 @@ select {
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 14px;
+    box-sizing: border-box; /* Importante para que padding no afecte el width */
 }
 
 textarea {
@@ -145,6 +156,7 @@ button {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
@@ -156,10 +168,21 @@ footer {
     background-color: #edb3f5;
     color: rgb(8, 8, 8);
     text-align: center;
-    padding: 10px;
-
+    padding: 20px; /* Aumenta padding para mejor apariencia */
+    margin-top: 30px;
 }
 
-
-
-
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+    }
+    
+    .menu li {
+        margin-bottom: 5px;
+    }
+    
+    .menu a {
+        padding: 12px;
+    }
+}
