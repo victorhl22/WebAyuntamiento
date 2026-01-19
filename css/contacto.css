@@ -1,87 +1,169 @@
-body {
+/* contacto.css - VERSIÓN CON CLASES ESPECÍFICAS */
+
+/* Body específico para contacto */
+.contacto-body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     background-color: #f4f6f8;
     color: #333;
 }
 
-header {
+/* Header específico (NO usa el header general) */
+.contacto-header {
     background-color: #e7de89;
     color: #2c3e50;
     padding: 20px;
     text-align: center;
 }
 
-main {
+/* Main específico (NO usa el main general) */
+.contacto-main {
     max-width: 1100px;
     margin: auto;
     padding: 20px;
 }
 
-section {
-    background: #2c3e50;
+/* Secciones específicas (NO usa section general) */
+.contacto-section {
+    background: white;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 6px #0000001a;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    border-left: 5px solid #2c3e50;
 }
 
-h2 {
+/* Títulos específicos (NO usa h2 general) */
+.contacto-titulo {
     color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e7de89;
 }
 
-.contacto p {
+/* Información de contacto */
+.contacto-datos p {
     margin: 8px 0;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
 }
 
-.mapa iframe {
+.contacto-datos p:last-child {
+    border-bottom: none;
+}
+
+/* Mapa */
+.contacto-mapa iframe {
     width: 100%;
     height: 350px;
     border: 0;
     border-radius: 6px;
+    border: 2px solid #e7de89;
 }
 
-form {
+/* Formulario específico (NO usa form general) */
+.contacto-form {
     display: grid;
     gap: 15px;
 }
 
-label {
+.contacto-label {
     font-weight: bold;
+    color: #2c3e50;
 }
 
-input,
-textarea,
-select {
+.contacto-input,
+.contacto-textarea,
+.contacto-select {
     width: 100%;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 14px;
+    box-sizing: border-box;
 }
 
-textarea {
+.contacto-input:focus,
+.contacto-textarea:focus,
+.contacto-select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.contacto-textarea {
     resize: vertical;
     min-height: 120px;
 }
 
-button {
+.contacto-boton {
     background-color: #2c3e50;
     color: white;
-    padding: 12px;
+    padding: 12px 25px;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #2c3e50;
+.contacto-boton:hover {
+    background-color: #3498db;
 }
 
-footer {
+/* Footer específico (NO usa footer general) */
+.contacto-footer {
     text-align: center;
-    padding: 15px;
+    padding: 20px;
     background-color: #edb3f5;
     font-size: 14px;
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+/* Utilidades específicas */
+.contacto-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.contacto-form-grupo {
+    margin-bottom: 10px;
+}
+
+.contacto-enlace {
+    margin-top: 15px;
+}
+
+.contacto-enlace a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+.contacto-enlace a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contacto-main {
+        padding: 15px;
+    }
+    
+    .contacto-section {
+        padding: 15px;
+    }
+    
+    .contacto-mapa iframe {
+        height: 250px;
+    }
+    
+    .contacto-boton {
+        width: 100%;
+    }
 }
