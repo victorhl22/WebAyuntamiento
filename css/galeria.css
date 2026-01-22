@@ -1,91 +1,24 @@
-/* ===== ESTILOS GENERALES ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Arial, sans-serif;
-}
+/* ===== ESTILOS ESPECÍFICOS PARA GALERÍA ===== */
 
-body {
-    background-color: #f5f9f0;
-    color: #333;
-    min-height: 100vh;
+/* Contenedor principal */
+.container {
+    flex: 1;
     display: flex;
     flex-direction: column;
-}
-
-/* ===== HEADER PRINCIPAL ===== */
-.header-principal {
-    background-color: #e7de89;
-    padding: 10px;
-    text-align: center;
-    flex-shrink: 0;
-}
-
-.header-container {
-    display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.logo {
-    height: 80px;
-    width: auto;
-}
-
-.header-principal h1 {
-    margin: 0;
-    font-size: 1.8rem;
-    color: #2c3e50;
-}
-
-/* ===== MENÚ DE NAVEGACIÓN ===== */
-.menu-navegacion {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0 0;
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    background-color: #2c3e50;
-}
-
-.menu-navegacion li {
-    flex: 1;
-    text-align: center;
-}
-
-.menu-navegacion a {
-    color: #f7f8f8;
-    text-decoration: none;
-    font-weight: bold;
-    display: block;
-    padding: 15px 10px;
-    transition: all 0.3s;
-}
-
-.menu-navegacion a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    text-decoration: underline;
-}
-
-/* ===== INTRODUCCIÓN GALERÍA ===== */
-.intro-galeria {
-    background-color: white;
-    padding: 1.5rem;
-    margin: 1rem auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    padding: 20px;
     max-width: 1200px;
-    text-align: center;
-    flex-shrink: 0;
+    margin: 0 auto;
+    width: 100%;
 }
 
-.intro-galeria p {
-    font-size: 1.05rem;
-    color: #444;
+/* Subtítulo del header */
+.subtitle {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    text-align: center;
+    margin: 10px 0;
+    font-style: italic;
 }
 
 /* ===== CONTENEDOR GALERÍA 2 FILAS ===== */
@@ -95,8 +28,6 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
     width: 100%;
 }
 
@@ -104,7 +35,7 @@ body {
 .galeria-2filas {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
     width: 100%;
     padding: 0.5rem;
 }
@@ -118,120 +49,30 @@ body {
 }
 
 /* ===== ITEMS DE LA GALERÍA CON ENLACES ===== */
-/* CLASE PARA LA TARJETA COMPLETA COMO ENLACE */
 .item-galeria-enlace {
     flex: 1;
     min-width: 0;
     max-width: 350px;
-    height: 350px;
+    height: 380px;
     background-color: white;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
     text-decoration: none;
     color: inherit;
     position: relative;
+    cursor: pointer;
 }
 
 .item-galeria-enlace:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* CLASE PARA LA IMAGEN COMO ENLACE (sin cambiar estructura) */
-.enlace-imagen-galeria {
-    display: block;
-    position: relative;
-    text-decoration: none;
-    height: 55%;
-    overflow: hidden;
-}
-
-.enlace-imagen-galeria img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.enlace-imagen-galeria:hover img {
-    transform: scale(1.05);
-}
-
-/* Overlay para indicar que es clickable */
-.overlay-click {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-align: center;
-    padding: 20px;
-}
-
-.enlace-imagen-galeria:hover .overlay-click,
-.item-galeria-enlace:hover .overlay-click {
-    opacity: 1;
-}
-
-/* Efecto de cursor pointer para elementos clickables */
-.clickable {
-    cursor: pointer;
-}
-
-/* Indicador visual de que es clickable */
-.indicator-click {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: rgba(255, 255, 255, 0.9);
-    color: #2c3e50;
-    padding: 5px 10px;
-    border-radius: 15px;
-    font-size: 0.7rem;
-    font-weight: bold;
-    z-index: 10;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.item-galeria-enlace:hover .indicator-click,
-.enlace-imagen-galeria:hover .indicator-click {
-    opacity: 1;
-}
-
-/* ===== ITEMS DE LA GALERÍA ORIGINAL (mantener compatibilidad) ===== */
-.item-galeria {
-    flex: 1;
-    min-width: 0;
-    max-width: 350px;
-    height: 350px;
-    background-color: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-}
-
-.item-galeria:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
-}
-
+/* Contenedor de imagen */
 .contenedor-imagen {
     height: 55%;
     overflow: hidden;
@@ -245,28 +86,86 @@ body {
     transition: transform 0.5s ease;
 }
 
-.item-galeria:hover .contenedor-imagen img {
+.item-galeria-enlace:hover .contenedor-imagen img {
     transform: scale(1.05);
 }
 
+/* Clase para tamaño de imagen específico */
+.medida-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay para indicar que es clickable */
+.overlay-click {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(44, 62, 80, 0.85);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    z-index: 2;
+}
+
+.item-galeria-enlace:hover .overlay-click {
+    opacity: 1;
+}
+
+/* Indicador visual de que es clickable */
+.indicator-click {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #2c3e50;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.item-galeria-enlace:hover .indicator-click {
+    opacity: 1;
+}
+
+/* Descripción de la imagen */
 .descripcion-imagen {
     padding: 1.2rem;
     flex: 1;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
+    background-color: white;
 }
 
 .descripcion-imagen h3 {
-    color: #2d5a27;
+    color: #2c3e50;
     margin-bottom: 0.8rem;
     font-size: 1.3rem;
+    font-weight: 600;
 }
 
 .descripcion-imagen p {
     color: #555;
     font-size: 0.95rem;
     line-height: 1.5;
+    margin: 0;
 }
 
 /* ===== ETIQUETAS DE CATEGORÍA ===== */
@@ -278,21 +177,144 @@ body {
     font-weight: 600;
     margin-bottom: 0.8rem;
     align-self: flex-start;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .etiqueta-naturaleza { 
     background-color: #e1f5e1; 
     color: #2d5a27; 
+    border: 1px solid #c8e6c9;
 }
 
 .etiqueta-proyecto { 
     background-color: #e3f2fd; 
     color: #1565c0; 
+    border: 1px solid #bbdefb;
 }
 
 .etiqueta-evento { 
     background-color: #fff3e0; 
     color: #e65100; 
+    border: 1px solid #ffe0b2;
 }
 
+/* Enlace de volver al inicio */
+.enlace-inicio {
+    text-align: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
 
+.enlace-inicio a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    transition: all 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.enlace-inicio a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateX(-3px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+    .galeria-container {
+        padding: 1rem;
+    }
+    
+    .item-galeria-enlace {
+        max-width: 300px;
+        height: 360px;
+    }
+}
+
+@media (max-width: 992px) {
+    .fila-galeria {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .item-galeria-enlace {
+        flex: 0 0 calc(50% - 1.5rem);
+        max-width: calc(50% - 1.5rem);
+        height: 340px;
+        margin-bottom: 0.5rem;
+    }
+    
+    .galeria-2filas {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .header-principal h1 {
+        font-size: 1.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .menu-navegacion {
+        flex-direction: column;
+    }
+    
+    .menu-navegacion li {
+        margin-bottom: 2px;
+    }
+    
+    .item-galeria-enlace {
+        flex: 0 0 100%;
+        max-width: 400px;
+        height: 350px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .fila-galeria {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .galeria-2filas {
+        gap: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .item-galeria-enlace {
+        height: 320px;
+        max-width: 100%;
+    }
+    
+    .descripcion-imagen {
+        padding: 1rem;
+    }
+    
+    .descripcion-imagen h3 {
+        font-size: 1.1rem;
+    }
+    
+    .descripcion-imagen p {
+        font-size: 0.9rem;
+    }
+    
+    .overlay-click {
+        font-size: 1rem;
+        padding: 15px;
+    }
+}
