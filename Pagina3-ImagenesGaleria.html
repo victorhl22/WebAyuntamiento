@@ -4,124 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galería Sostenible - Palau-solità i Plegamans</title>
-
     <link rel="stylesheet" href="css/estilo.css">
-    
     <link rel="stylesheet" href="css/galeria.css">
-
 </head>
 <body>
-    <header>
+    <header class="header-principal">
         <div class="header-container">
-        <img src="imagenes/escudo.jpg" alt="Logo Ayuntamiento" class="logo">
-        <h1> Galeria Palau-solità i Plegamans</h1>
-    </div>
-    <p class="subtitle">Galería de paisajes naturales y proyectos sostenibles del municipio</p>
-    <nav>
-                <ul class="menu">
-                    <li><a href="Pagina4-Medidas.html">Medidas</a></li>
-                    <li><a href="Pagina2-Consejos.html">Consejos</a></li>
-                    <li><a href="Pagina3-ImagenesGaleria.html">Galería Imágenes</a></li>
-                    <li><a href="Pagina5-Agenda2030.html">Agenda 2030</a></li>
-                    <li><a href="Pagina6-Contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </header>
+            <img src="imagenes/escudo.jpg" alt="Logo Ayuntamiento" class="logo">
+            <h1>Galeria Palau-solità i Plegamans</h1>
+        </div>
+        <p class="subtitle">Galería de paisajes naturales y proyectos sostenibles del municipio</p>
+        <nav>
+            <ul class="menu-navegacion">
+                <li><a href="Pagina4-Medidas.html">Medidas</a></li>
+                <li><a href="Pagina2-Consejos.html">Consejos</a></li>
+                <li><a href="Pagina3-ImagenesGaleria.html">Galería Imágenes</a></li>
+                <li><a href="Pagina5-Agenda2030.html">Agenda 2030</a></li>
+                <li><a href="Pagina6-Contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <div class="container">
-        <section class="intro">
+        <section class="intro-galeria">
             <p>Descobreix la bellesa natural de Palau-solità i Plegamans i els seus esforços per a un futur més sostenible. Aquesta galeria mostra els paisages més emblemàtics del municipi, els projectes ambientals impulsats per l'Ajuntament i els events comunitàris dedicats a la preservació del medi ambient.</p>
         </section>
-        <!-- Añade esto en tu HTML donde quieras la galería -->
-<div class="galeria-container">
-    <div class="galeria-2filas">
 
-        <!-- Primera fila (3 imágenes) -->
-        <div class="fila-galeria">
-            <a href="https://www.palauplegamans.cat/ca/ser-med-horts-municipals" class="item-galeria enlace-galeria">
-                <div class="contenedor-imagen" class="texto-hover">
-                    <img src="imagenes/riera.png" class="medida-imagen" alt="Riera">
-                <p>Ayuntamiento de Palau-solità y Plegamans</p>
+        <div class="galeria-container">
+            <div class="galeria-2filas">
+                <!-- Primera fila (3 imágenes) -->
+                <div class="fila-galeria">
+                    <a href="https://www.palauplegamans.cat/ca/ser-med-horts-municipals" class="item-galeria-enlace">
+                        <div class="contenedor-imagen">
+                            <img src="imagenes/riera.png" class="medida-imagen" alt="Riera">
+                            <div class="overlay-click">Ver detalles</div>
+                            <span class="indicator-click">CLICK</span>
+                        </div>
+                        <div class="descripcion-imagen">
+                            <span class="etiqueta-categoria etiqueta-naturaleza">Paisaje Natural</span>
+                            <h3>Riera de Palau Solità</h3>
+                            <p>Parte de la Riera de Caldes que pasa por el municipio de Palau Solità.</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.palauplegamans.cat/pl5/descobrir/equipament/id14/parc-de-l-hostal-del-fum.htm" class="item-galeria-enlace">
+                        <div class="contenedor-imagen">
+                            <img src="imagenes/parque.jpg" class="medida-imagen" alt="Parque Hostal del Fum">
+                            <div class="overlay-click">Ver detalles</div>
+                            <span class="indicator-click">CLICK</span>
+                        </div>
+                        <div class="descripcion-imagen">
+                            <span class="etiqueta-categoria etiqueta-proyecto">Parque interactivo</span>
+                            <h3>Parc Hostal del Fum</h3>
+                            <p>Parque del tren conocido coloquialmente que puedes realizar un paseo por todo el parque mediante un tren de carbón.</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.palauplegamans.cat/actualitat/pln17/torna-el-clean-up-day-a-palau-solita-i-plegamans-4" class="item-galeria-enlace">
+                        <div class="contenedor-imagen">
+                            <img src="imagenes/neteja.png" class="medida-imagen" alt="Jornada de limpieza">
+                            <div class="overlay-click">Ver detalles</div>
+                            <span class="indicator-click">CLICK</span>
+                        </div>
+                        <div class="descripcion-imagen">
+                            <span class="etiqueta-categoria etiqueta-evento">Iniciativa Sostenible</span>
+                            <h3>Jornada de Neteja</h3>
+                            <p>Iniciativa comunitaria para realizar actividades en conjunto con el pueblo para mantener limpias las áreas naturales.</p>
+                        </div>
+                    </a>
                 </div>
                 
-                <div class="descripcion-imagen">
-                    <span class="etiqueta-categoria etiqueta-naturaleza">Paisaje Natural</span>
-                    <h3>Riera de Palau Solità</h3>
-                    <p>Parte de la Riera de Caldes que pasa por el municipio de Palau Solità.</p>
-                </div>
-            </div>
-            
-            <a href="https://www.palauplegamans.cat/pl5/descobrir/equipament/id14/parc-de-l-hostal-del-fum.htm" class="item-galeria-enlace">
-                <div class="contenedor-imagen">
-                    <img src="imagenes/parque.jpg" class="medida-imagen" alt="Paneles solares municipales">
-                </div>
-                <div class="descripcion-imagen">
-                    <span class="etiqueta-categoria etiqueta-proyecto">Parque interactivo</span>
-                    <h3>Parc Hostal del Fum</h3>
-                    <p>Parque del tren conocido coloquialmente que puedes realizar un paseo por todo el parque mediante un tren de carbol.</p>
-                </div>
-            </div>
-            
-            <a href="">
-                <div class="contenedor-imagen">
-                    <a href="https://www.palauplegamans.cat/actualitat/pln17/torna-el-clean-up-day-a-palau-solita-i-plegamans-4" class="item-galeria-enlace">
-                    <img src="imagenes/neteja.png" class="medida-imagen" alt="Paneles solares municipales">
-                </div>
-                <div class="descripcion-imagen">
-                    <span class="etiqueta-categoria etiqueta-evento">Iniciativa Sostenible</span>
-                    <h3>Jornada de Neteja</h3>
-                    <p>Iniciativa comunitaria para realizar actividades en conjunto con el pueblo para mantener limpias las areas naturales.</p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Segunda fila (3 imágenes) -->
-        <div class="fila-galeria">
-            <a href="https://www.palauplegamans.cat/actualitat/noticies/pln17/canvis-en-el-servei-de-recollida-selectiva-porta-a-porta-durant-les-festes" class="item-galeria-enlace" class="item-galeria-enlace">
-                <div class="contenedor-imagen">
-                    <img src="imagenes/horario.jpg" class="medida-imagen" alt="Paneles solares municipales">
-                </div>
-                <div class="descripcion-imagen">
-                    <span class="etiqueta-categoria etiqueta-proyecto">Proyecto Recogida</span>
-                    <h3>Recogida puerta a pueta</h3>
-                    <p>Es un proyecto que facilita la recogida de los residuos.</p>
-                </div>
-            </div>
-            
-            <a href="https://www.palauplegamans.cat/ca/ser-med-horts-municipals" class="item-galeria-enlace">
-                <div class="contenedor-imagen">
-                    <img src="imagenes/huerto.jpg" class="medida-imagen" alt="Huertos urbanos">
-                </div>
-                <div class="descripcion-imagen">
-                    <span class="etiqueta-categoria etiqueta-naturaleza">Espacio Natural</span>
-                    <h3>Huertos Urbanos</h3>
-                    <p>Huertos comunicarios.</p>
-                </div>
-            </div>
-            
-            <a href="https://www.palauplegamans.cat/ca/ser-med-educacio-ambiental-a-les-escoles" class="item-galeria-enlace">
-                <div class="contenedor-imagen">
-                    <img src="imagenes/Talleres.jpg" class="medida-imagen" alt="Talleres creativos con alumnos">
-                </div>
-                <div class="descripcion-imagen">
-                    <span class="etiqueta-categoria etiqueta-evento">Taller Sostenible</span>
-                    <h3>Tallers Creatius</h3>
-                    <p>Aprendizaje del medioambiente talleres educativos.</p>
+                <!-- Segunda fila (3 imágenes) -->
+                <div class="fila-galeria">
+                    <a href="https://www.palauplegamans.cat/actualitat/noticies/pln17/canvis-en-el-servei-de-recollida-selectiva-porta-a-porta-durant-les-festes" class="item-galeria-enlace">
+                        <div class="contenedor-imagen">
+                            <img src="imagenes/horario.jpg" class="medida-imagen" alt="Recogida puerta a puerta">
+                            <div class="overlay-click">Ver detalles</div>
+                            <span class="indicator-click">CLICK</span>
+                        </div>
+                        <div class="descripcion-imagen">
+                            <span class="etiqueta-categoria etiqueta-proyecto">Proyecto Recogida</span>
+                            <h3>Recogida puerta a puerta</h3>
+                            <p>Es un proyecto que facilita la recogida de los residuos.</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.palauplegamans.cat/ca/ser-med-horts-municipals" class="item-galeria-enlace">
+                        <div class="contenedor-imagen">
+                            <img src="imagenes/huerto.jpg" class="medida-imagen" alt="Huertos urbanos">
+                            <div class="overlay-click">Ver detalles</div>
+                            <span class="indicator-click">CLICK</span>
+                        </div>
+                        <div class="descripcion-imagen">
+                            <span class="etiqueta-categoria etiqueta-naturaleza">Espacio Natural</span>
+                            <h3>Huertos Urbanos</h3>
+                            <p>Huertos comunitarios.</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.palauplegamans.cat/ca/ser-med-educacio-ambiental-a-les-escoles" class="item-galeria-enlace">
+                        <div class="contenedor-imagen">
+                            <img src="imagenes/Talleres.jpg" class="medida-imagen" alt="Talleres creativos con alumnos">
+                            <div class="overlay-click">Ver detalles</div>
+                            <span class="indicator-click">CLICK</span>
+                        </div>
+                        <div class="descripcion-imagen">
+                            <span class="etiqueta-categoria etiqueta-evento">Taller Sostenible</span>
+                            <h3>Tallers Creatius</h3>
+                            <p>Aprendizaje del medioambiente talleres educativos.</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-</div>
-        
-    
-   <footer>
-        © 2026 Ayuntamiento de Palau-solità i Plegamans
-       <p class="enlace-inicio">
-        <a href="index.html">← Volver a la página principal</a>
-    </p>
+
+    <footer class="footer-principal">
+        <p>© 2026 Ayuntamiento de Palau-solità i Plegamans</p>
+        <p class="enlace-inicio">
+            <a href="index.html">← Volver a la página principal</a>
+        </p>
     </footer>
 </body>
 </html>
-
-
-
