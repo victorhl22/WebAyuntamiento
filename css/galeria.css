@@ -1,0 +1,470 @@
+<style>
+/* ===== ESTILOS GENERALES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f9f0;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== HEADER PRINCIPAL ===== */
+.header-principal {
+    background-color: #e7de89;
+    padding: 10px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+}
+
+.header-principal h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #2c3e50;
+}
+
+/* ===== MENÚ DE NAVEGACIÓN ===== */
+.menu-navegacion {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #2c3e50;
+}
+
+.menu-navegacion li {
+    flex: 1;
+    text-align: center;
+}
+
+.menu-navegacion a {
+    color: #f7f8f8;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 15px 10px;
+    transition: all 0.3s;
+}
+
+.menu-navegacion a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-decoration: underline;
+}
+
+/* ===== INTRODUCCIÓN GALERÍA ===== */
+.intro-galeria {
+    background-color: white;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    max-width: 1200px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.intro-galeria p {
+    font-size: 1.05rem;
+    color: #444;
+}
+
+/* ===== CONTENEDOR GALERÍA 2 FILAS ===== */
+.galeria-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Contenedor principal de la galería */
+.galeria-2filas {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 0.5rem;
+}
+
+/* Cada fila de la galería */
+.fila-galeria {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+/* ===== ITEMS DE LA GALERÍA ===== */
+.item-galeria {
+    flex: 1;
+    min-width: 0; /* Permite que se ajusten */
+    max-width: 350px;
+    height: 350px;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-galeria:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contenedor-imagen {
+    height: 55%;
+    overflow: hidden;
+}
+
+.contenedor-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.item-galeria:hover .contenedor-imagen img {
+    transform: scale(1.05);
+}
+
+.descripcion-imagen {
+    padding: 1.2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.descripcion-imagen h3 {
+    color: #2d5a27;
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+}
+
+.descripcion-imagen p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* ===== ETIQUETAS DE CATEGORÍA ===== */
+.etiqueta-categoria {
+    display: inline-block;
+    padding: 0.35rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    align-self: flex-start;
+}
+
+.etiqueta-naturaleza { 
+    background-color: #e1f5e1; 
+    color: #2d5a27; 
+}
+
+.etiqueta-proyecto { 
+    background-color: #e3f2fd; 
+    color: #1565c0; 
+}
+
+.etiqueta-evento { 
+    background-color: #fff3e0; 
+    color: #e65100; 
+}
+
+/* ===== CONTENIDO PRINCIPAL (para otras páginas) ===== */
+.contenido-principal {
+    padding: 30px 20px;
+}
+
+.contenedor-principal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+/* ===== IMAGEN CON HOVER (para otras páginas) ===== */
+.imagen-con-hover {
+    position: relative;
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.imagen-con-hover img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.texto-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    color: rgb(255, 246, 246);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.imagen-con-hover:hover .texto-hover {
+    opacity: 1;
+}
+
+/* ===== NOTICIAS MEDIOAMBIENTALES ===== */
+.noticias-medioambiente {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.noticia {
+    background-color: #e7de89;
+    border-left: 5px solid #2c3e50;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.noticia h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+    color: #2c3e50;
+}
+
+.noticia p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+/* ===== LISTA DE EVENTOS ===== */
+.lista-eventos {
+    flex: 1;
+    min-width: 300px;
+    max-width: 550px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.titulo-eventos {
+    color: #2c3e50;
+    border-bottom: 3px solid #e7de89;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.lista-eventos-contenido {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.item-evento {
+    padding: 18px 0;
+    border-bottom: 2px solid #eee;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.item-evento:hover {
+    background-color: #f9f9f9;
+    padding-left: 10px;
+    border-left: 4px solid #2c3e50;
+}
+
+.item-evento:last-child {
+    border-bottom: none;
+}
+
+.fecha-evento {
+    display: block;
+    background-color: #2c3e50;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+    width: fit-content;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nombre-evento {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    font-weight: bold;
+    line-height: 1.4;
+    padding-left: 5px;
+    border-left: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.item-evento:hover .nombre-evento {
+    color: #3498db;
+    border-left-color: #3498db;
+}
+
+/* ===== FOOTER ===== */
+.footer-principal {
+    background-color: #edb3f5;
+    color: rgb(8, 8, 8);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+    .galeria-container {
+        padding: 1rem 2rem;
+    }
+    
+    .item-galeria {
+        height: 320px;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 992px) {
+    .fila-galeria {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .item-galeria {
+        flex: 0 0 calc(50% - 1.5rem);
+        max-width: calc(50% - 1.5rem);
+        height: 300px;
+    }
+    
+    /* En pantallas medianas, mostramos 2x3 en lugar de 3x2 */
+    .galeria-2filas {
+        flex-direction: column;
+    }
+    
+    .fila-galeria:nth-child(2) {
+        margin-top: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedor-principal {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .imagen-con-hover, .lista-eventos {
+        max-width: 100%;
+    }
+    
+    .header-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .menu-navegacion {
+        flex-direction: column;
+    }
+    
+    .menu-navegacion li {
+        margin-bottom: 2px;
+    }
+    
+    .header-principal h1 {
+        font-size: 1.5rem;
+    }
+    
+    .imagen-con-hover img {
+        height: 300px;
+    }
+    
+    /* En móviles, 1 columna */
+    .item-galeria {
+        flex: 0 0 100%;
+        max-width: 400px;
+        height: 350px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .fila-galeria {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .galeria-2filas {
+        gap: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .item-galeria {
+        height: 320px;
+    }
+    
+    .descripcion-imagen {
+        padding: 1rem;
+    }
+    
+    .descripcion-imagen h3 {
+        font-size: 1.1rem;
+    }
+    
+    .descripcion-imagen p {
+        font-size: 0.9rem;
+    }
+}
+</style>
